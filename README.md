@@ -60,7 +60,7 @@ scripts/bootstrap_flutter_module.sh
 
 ```bash
 cd android_host
-./gradlew :app:assembleDebug
+gradle :app:assembleDebug
 ```
 
 Android flow:

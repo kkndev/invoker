@@ -16,4 +16,8 @@ dev_dependencies:
   flutter_lints: ^4.0.0
 
 flutter:
+  module:
+    androidX: true
+    androidPackage: com.example.hybrid.flutter_module
+    iosBundleIdentifier: com.example.hybrid.flutterModule
   uses-material-design: true

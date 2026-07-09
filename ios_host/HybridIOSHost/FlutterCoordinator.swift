@@ -14,9 +14,6 @@ final class FlutterCoordinator {
             return
         }
 
-        engine.run()
-        isRunning = true
-
         let channel = FlutterMethodChannel(
             name: "com.example.hybrid/native_bridge",
             binaryMessenger: engine.binaryMessenger
@@ -29,6 +26,9 @@ final class FlutterCoordinator {
                 result(FlutterMethodNotImplemented)
             }
         }
+
+        engine.run()
+        isRunning = true
     }
 
     func makeFlutterViewController() -> FlutterViewController {

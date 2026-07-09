@@ -38,8 +38,6 @@ class MainActivity : Activity() {
         }
 
         val engine = FlutterEngine(this)
-        engine.dartExecutor.executeDartEntrypoint(DartExecutor.DartEntrypoint.createDefault())
-
         MethodChannel(engine.dartExecutor.binaryMessenger, CHANNEL_NAME)
             .setMethodCallHandler { call, result ->
                 when (call.method) {
@@ -49,6 +47,8 @@ class MainActivity : Activity() {
                     else -> result.notImplemented()
                 }
             }
+
+        engine.dartExecutor.executeDartEntrypoint(DartExecutor.DartEntrypoint.createDefault())
 
         FlutterEngineCache.getInstance().put(ENGINE_ID, engine)
         flutterEngine = engine
