@@ -1,0 +1,27 @@
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+build/
+
+# Flutter module generated wrappers. Recreate with scripts/bootstrap_flutter_module.sh.
+flutter_module/.android/
+flutter_module/.ios/
+
+# Android
+*.iml
+.gradle/
+local.properties
+android_host/.idea/
+android_host/app/build/
+
+# iOS
+ios_host/Pods/
+ios_host/Podfile.lock
+ios_host/*.xcworkspace/
+ios_host/DerivedData/
+
+# OS/editor
+.DS_Store
+.vscode/
